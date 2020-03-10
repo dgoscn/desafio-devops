@@ -1,0 +1,9 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      python: 3.6
+  pre_build:
+    commands:
+      - pip install -r dependencies.txt
+      - BASE_API_ENV=test pipenv run pytest
